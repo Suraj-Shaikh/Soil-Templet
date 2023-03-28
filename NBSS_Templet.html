@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBSS Templet</title>
+    <style>
+        /* body {
+            background-color: rgb(115, 115, 212);
+            border: 2px solid black;
+            margin: 25px;
+        } */
+
+        .Layout {
+            width: 36in;
+            height: 60in;
+            background-color: blue;
+            border: 2px solid black;
+            padding: 0.5in;
+            /* padding-top: 1in; */
+        }
+
+        .Tlayout {
+            background-color: rgb(229, 235, 147);
+            border: 2px solid gray;
+            border-radius: 50px;
+            width: 35in;
+            height: 6in;
+            padding: 0.5in;
+        }
+
+        .LohoL {
+            padding-top: 15px;
+        }
+
+        .LohoR {
+            padding-top: 15px;
+        }
+
+        .HT {
+            margin: 0.5in;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: stretch;
+            width: 36in;
+            /* background-color: #f1f1f1; */
+        }
+
+        .flex-container>div {
+            /* background-color: DodgerBlue; */
+            color: white;
+            margin: 5px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 80px;
+
+        }
+
+        #VS {
+            color: black;
+            text-align: left;
+            line-height: 85px;
+        }
+
+
+        .Mlayout {
+            position: relative;
+            width: 34in;
+            height: 26in;
+            border: 3px solid #73AD21;
+            border-radius: 15px;
+            margin-top: 0.5in;
+            padding: 1in;
+            padding-bottom: 0.5in;
+        }
+
+        .Map {
+            box-sizing: border-box;
+            background-color: rgb(243, 245, 236);
+            border: 2px solid black;
+            width: 17.5in;
+            height: 13in;
+            margin: 0.5in;
+            border-radius: 15px;
+            text-align: left;
+        }
+
+        #ImageArea.Map {
+            content: "";
+            position: absolute;
+            width: 1000px;
+            float: left;
+            width: 100%;
+            clear: both;
+        }
+
+        #TableArea {
+            content: "";
+            margin-left: 3px;
+            bottom: 50%;
+            font-size: 50px;
+            float: right;
+            Display: table
+        }
+
+        div.LFM1 {
+            width: 50%;
+            /* border: 5px solid red; */
+            float: left;
+            top: 20%;
+
+        }
+
+        #LF {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 80px;
+        }
+
+        #SD {
+            position: absolute;
+            top: 0;
+            left: 1700px;
+            font-size: 80px;
+        }
+
+        #AWC {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: 80px;
+        }
+
+        #OC {
+            position: absolute;
+            right: 1700px;
+            bottom: 0;
+            left: 1700px;
+            font-size: 80px;
+        }
+
+        .Remark {
+            position: relative;
+            background-color: rgb(233, 233, 243);
+            width: 35in;
+            height: 10in;
+            border: 3px solid #73AD21;
+            border-radius: 15px;
+            margin-top: 0.5in;
+            padding: 50px;
+            line-height: 120px;
+        }
+
+        Footer {
+            width: 35in;
+            height: 5in;
+            background-color: gold;
+            font-size: 100px;
+            text-align: center;
+            margin-top: 1in;
+            border-radius: 15px;
+            padding: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="Layout">
+        <div class="Tlayout">
+            <div class="flex-container">
+                <div class="LohoL" style="flex-grow: 1">
+                    <img src="Images/pocra logo.jpg" alt="" width="200px"> <br><br>
+                    <img src="Images/NBSS.png" alt="" width="200px">
+                </div>
+                <div class="HT" style="flex-grow: 1">
+                    <h4 style="color:rgb(19, 18, 18)">नानाजी देशमुख कृषि संजीवनी प्रकल्प</h4>
+                    <h1 style="color:red">गाव जमीन-मृदा नकाशे </h1>
+                </div>
+                <div class="LohoR" style="flex-grow: 1">
+                    <img src="Images/E-krushi-vibhag-logo.jpg" alt="" width="200px"> <br><br>
+                    <img src="Images/World_Bank.png" alt="" width="200px" height="200px">
+                </div>
+                <div id="VS" style="flex-grow: 4;">
+                    <ul style="font-size:60px">
+                        <li>गावाचे नाव :</li>
+                        <li>गावाचा सांकेतांक :</li>
+                        <li>तालुका नाव :</li>
+                        <li>जिल्हा नाव :</li>
+                        <li>अक्षांश-रेखांश:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Mlayout">
+            <div id="LF" class="Map">
+                Landform
+                <!-- <div id="ImageArea" class="LFM1">
+                    <img src="Images/Sample/LF/526663. jpg" alt="" width="100%">
+                </div>
+                <div id="TableArea" class="LFM1">
+                    <table id="Tab" border="1">
+                        <tr>
+                            <th>भूरूपे</th>
+                            <th>निर्देशंक</th>
+                            <th>क्षेत्र (हे.)(&percnt;)</th>
+                        </tr>
+                        <tr>
+                            <td>उथळ</td>
+                            <td style='background-color:#73AD21;'></td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>मध्यम</td>
+                            <td style='background-color:#c4691f;'></td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>खोलगट</td>
+                            <td style='background-color:#9621ad;'></td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div> -->
+                <table>
+                    <tr>
+                        <td>
+                            <div id="ImageArea" class="LFM1">
+                                <img src="Images/Sample/LF/526663. jpg" alt="" width="150%">
+                            </div>
+                        </td>
+                        <td>
+                            <div id="TableArea" class="LFM1">
+                                <table id="Tab" border="1" width="50%">
+                                    <tr>
+                                        <th>भूरूपे</th>
+                                        <th>निर्देशंक</th>
+                                        <th>क्षेत्र (हे.)(&percnt;)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>उथळ</td>
+                                        <td style='background-color:#73AD21;'></td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>मध्यम</td>
+                                        <td style='background-color:#c4691f;'></td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>खोलगट</td>
+                                        <td style='background-color:#9621ad;'></td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="SD" class="Map" style="float:left;">
+                Soil Depth
+                <div id="ImageArea" class="LFM1">
+                    <img src="Images/Sample/SD/526663. jpg" alt="" width="100%">
+                </div>
+                <div id="TableArea" class="LFM1">
+                    <table id="Tab" border="1">
+                        <tr>
+                            <th>भूरूपे</th>
+                            <th>निर्देशंक</th>
+                            <th>क्षेत्र (हे.)(&percnt;)</th>
+                            <th>शेरा</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="AWC" class="Map" style="float:right">
+                Available Water Capacity
+                <div id="ImageArea" class="LFM1">
+                    <img src="Images/Sample/AWC/526663. jpg" alt="" width="100%">
+                </div>
+                <div id="TableArea" class="LFM1">
+                    <table id="Tab" border="1">
+                        <tr>
+                            <th>भूरूपे</th>
+                            <th>निर्देशंक</th>
+                            <th>क्षेत्र (हे.)(&percnt;)</th>
+                            <th>शेरा</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="OC" class="Map" style="float:right">
+                Organic Carbon
+                <div id="ImageArea" class="LFM1" style='float:left'>
+                    <img src="Images/Sample/OC/526663. jpg" alt="" width="100%">
+                </div>
+                <div id="TableArea" class="LFM1">
+                    <table id="Tab" border="1" style="margin-left:20%;">
+                        <tr>
+                            <th>भूरूपे</th>
+                            <th>निर्देशंक</th>
+                            <th>क्षेत्र (हे.)(&percnt;)</th>
+                            <th>शेरा</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="Remark">
+            <ul style="font-size:60px">
+                <li>ज्वारी, बाजारी, कडधान्ये इ. हलक्या प्रतीच्या जमिनीवर येणाऱ्या पिकांसाठी योग्य.</li>
+                <li>सोयाबीन, भुईमूग इ. मध्यम खोलीवर मुळे असणाऱ्या पिकांसाठी योग्य.</li>
+                <li>सर्व प्रकारच्या पिकांसाठी योग्य जमीन. </li>
+                <li>कमी जल धारण क्षमता. पसरट पिक घ्यावे. सेंद्रिय कचरा किंवा प्लॅस्टिकचे आच्छादण वापरावे. शेणखत,
+                    गांढुळखताचा सढळ वापर करावा. </li>
+                <li>मध्यम जल धारण क्षमता. पावसाने ८ - १० दिवस ताण दिल्यास आच्छादण वापरावे. </li>
+                <li>अधिक जल धारण क्षमता. निचरा होण्यासाठी तात्पुरती सरी दर १५ - २० फुट अंतरावर बनवावी. पेरणी करताना दर ३
+                    - ४ ओळीनंतर सरी पाडण्यासाठी ३ फुट जागा सोडावी. </li>
+            </ul>
+
+
+        </div>
+        <footer class="Footer"> माती वाचवा! जमिनीचे संवर्दधन करा !! सेंद्रिय कर्ब वाढवा !!!
+            अधिक माहितीसाठी संपर्क: ग्राम कृषि संजीवनी समिती/ तालुका कृषि अधिकारी कार्यालय
+            <br> http://mahapocra.gov.in
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
